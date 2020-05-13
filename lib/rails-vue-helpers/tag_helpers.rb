@@ -40,7 +40,7 @@ module RailsVueHelpers
       end
 
       (attributes['directives'] || {}).each do |key, value|
-        options["v-#{key}"] = value
+        options["v-#{key}"] = value.to_s
       end
 
       (attributes['props'] || {}).each do |key, value|
@@ -51,7 +51,19 @@ module RailsVueHelpers
         options['v-model'] = attributes['model']
       end
 
+      remove_quotation_marks(options)
       tag_builder.tag_options(options)
+    end
+
+    def remove_quotation_marks(options)
+      options.each do |key, value|
+        return unless value
+        next if value[0] != "\""
+        next if value[-1] != "\""
+
+        value[0] = ''
+        value[-1] = ''
+      end
     end
   end
 end
