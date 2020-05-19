@@ -2,7 +2,7 @@
 
 **VueHelpers** is a small gem developed by [Unagi](https://unagi.com.ar/) for Ruby on Rails applications. It has built-in helpers with [Vue.js](https://vuejs.org/) compatibility in order to use some of the most common Rails helpers with Vue.js directives.
 
-The gem allows Rails applications extends the implementation of `link_to`, `content_tag` and `check_box_tag` in order to support Vue.js directives.
+The gem extends the implementation of Rails' `link_to`, `content_tag` and `check_box_tag` in order to support Vue.js directives.
 
 ## Installation
 
