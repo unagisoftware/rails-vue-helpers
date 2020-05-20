@@ -1,17 +1,15 @@
 module RailsVueHelpers
   module TagHelpers
     def link_to(name = nil, options = nil, html_options = nil, &block)
-      options = html_options unless block_given?
-
-      rails_tag_with_vue_data(super, options, :a)
+      rails_tag_with_vue_data(super, block_given? ? options : html_options, :a)
     end
 
     def content_tag(name, content_or_options_with_block = nil, options = nil, escape = true, &block)
-      options = [content_or_options_with_block, options].find do |argument|
+      _options = [content_or_options_with_block, options].find do |argument|
         argument.is_a?(Hash)
       end
 
-      rails_tag_with_vue_data(super, options)
+      rails_tag_with_vue_data(super, _options)
     end
 
     def check_box_tag(name, value = '1', checked = false, options = {})
