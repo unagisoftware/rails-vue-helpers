@@ -22,11 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-This gem extends some of the most commons Rails helpers, so the original helpers can be used in the same the way as before without any modification.
+This gem extends some of the most commons Rails helpers, so the original helpers can be used in the same way as before without any modification.
 
-However, if you'd like to add some Vue directives, you should use consider this gem syntax. The following options applies for all the helpers the gem provides, which at the present time are: `link_to`, `content_tag` and `check_box_tag`.
+However, if you'd like to add some Vue directives, you should consider this gem syntax. The following options apply for all the helpers the gem provides, which at the present time are: `link_to`, `content_tag` and `check_box_tag`.
 
-All the options are received as values of the `vue` key. This key is another option as `class` or `id`, which are officially supported by Rails helpers. So, a full example could be the next one:
+All the options are received as values of the `vue` key. This key is another option such as `class` or `id`, which are officially supported by Rails helpers. So, a full example could be the next one:
 
 ```ruby
 <%= link_to users_path,
